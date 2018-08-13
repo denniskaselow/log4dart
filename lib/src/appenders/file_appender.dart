@@ -19,7 +19,7 @@ class FileAppender extends Appender {
     // TODO inneficient to open file for each log message, however I am not aware of
     // any ways to register methods to be exectued when the program shuts down
     File file = new File(_path);
-    file.openSync(mode:FileMode.APPEND).writeString("$message\n");
+    file.openSync(mode:FileMode.append).writeString("$message\n");
   }
 
   final String _path;

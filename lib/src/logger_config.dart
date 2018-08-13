@@ -61,7 +61,7 @@ class LoggerConfig implements Comparable<LoggerConfig> {
   int compareTo(LoggerConfig other) => (other == this) ? 0 : (other.name.length).compareTo(name.length);
 
   @override
-  bool operator ==(LoggerConfig other) => (other == null) ? false : (name == other.name);
+  bool operator ==(Object other) => other is LoggerConfig && name == other.name;
 
   @override
   int get hashCode => name.hashCode;
